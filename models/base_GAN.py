@@ -513,6 +513,7 @@ class BaseGAN():
                 self.getOriginalG().initFormatLayer(self.config.latentVectorDim)
             else:
                 # Replace me by a standard loadStatedict for open-sourcing TODO
+                # self.netG.load_state_dict()
                 loadStateDictCompatible(self.netG, in_state['netG'])
                 if 'avgG' in in_state:
                     print("Average network found !")
